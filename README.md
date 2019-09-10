@@ -30,11 +30,29 @@ config webpck.config.js  alias
 'style':path.join(__dirname,'../src/style')
 'style':path.resolve(__dirname,'../src/style')
 服务器代理
-....
+在webpackDevServer.config.js中建立服务器代理
+proxy:{
+        '/hehe':{
+          target:'http://www.baidu.com',
+          changeOrigin:true,
+          pathRewrite:{
+            '^/hehe':''
+          }        
+        },
+        '/api':{
+          target:'http://www.baidu.com',
+          changeOrigin:true,
+          pathRewrite:{
+            '^/api':''
+          }        
+        },
+    },
 
 #### 公有的库
 
-axios  二次封装   
+axios  二次封装  
+一次性安装--》npm install axios react-router-dom redux react-redux 
+注意：vue中组件继承实例，react中，Component是属于reaction中的方法
 路由
 react-redux
 
