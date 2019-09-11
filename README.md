@@ -22,7 +22,10 @@ npm install antd
 全局引入 100
 在index.js  import '/antd/dist/antd.css'
 按需引入
-
+npm  install babel-plugin-import 安装
+webpack.config.js   babel-loader
+['import',{'libraryName':'antd','style':true}],
+注意本项目的less 版本和antd的less 版本保持一致  2.7.3
 #### 基本配置
 
 起别名
